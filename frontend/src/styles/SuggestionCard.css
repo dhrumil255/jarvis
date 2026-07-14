@@ -1,0 +1,68 @@
+.suggestion-card {
+
+    background: rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.05);
+
+    border-radius:18px;
+
+    padding:22px;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+    min-height:170px;
+}
+
+.suggestion-card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:rgba(0,212,255,.35);
+
+    box-shadow:var(--shadow-soft);
+}
+
+.card-icon{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:14px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,212,255,.12);
+
+    color:var(--accent);
+}
+
+.suggestion-card h3{
+
+    color:var(--text-primary);
+
+    font-size:18px;
+
+    margin:0;
+}
+
+.suggestion-card p{
+
+    color:var(--text-secondary);
+
+    line-height:1.6;
+
+    margin:0;
+}

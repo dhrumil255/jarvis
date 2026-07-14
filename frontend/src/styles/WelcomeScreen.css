@@ -1,0 +1,42 @@
+.welcome-screen{
+
+    width:100%;
+
+    max-width:900px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:50px;
+}
+
+.welcome-header{
+
+    text-align:center;
+}
+
+.welcome-header h1{
+
+    color:var(--text-primary);
+
+    font-size:42px;
+
+    margin-bottom:15px;
+}
+
+.welcome-header p{
+
+    color:var(--text-secondary);
+
+    font-size:18px;
+}
+
+.suggestion-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+}

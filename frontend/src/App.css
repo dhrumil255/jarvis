@@ -1,0 +1,28 @@
+.app{
+    height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:14px;
+
+    background:#080B12;
+
+    overflow:hidden;
+}
+
+.main-content{
+
+    flex:1;
+
+    display:flex;
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+    background:#111827;
+
+    border:1px solid rgba(255,255,255,.05);
+}

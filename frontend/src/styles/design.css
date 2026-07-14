@@ -1,0 +1,30 @@
+:root {
+
+  /* Colors */
+  --bg-primary: #080b12;
+  --bg-secondary: #111827;
+  --bg-tertiary: #171f2f;
+
+  --border-color: #26334d;
+
+  --accent: #00d4ff;
+  --accent-hover: #30dcff;
+
+  --success: #2dff7a;
+
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+
+  /* Shadows */
+  --shadow-soft: 0 0 18px rgba(0,212,255,.08);
+
+  /* Animation */
+
+  --transition: .25s ease;
+
+}
