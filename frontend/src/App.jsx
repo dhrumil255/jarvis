@@ -8,9 +8,9 @@ import ChatArea from "./components/ChatArea";
 import ChatInput from "./components/ChatInput";
 
 function App() {
-
   const [inputText, setInputText] = useState("");
   const [messages, setMessages] = useState([]);
+  const [isTyping, setIsTyping] = useState(false);
 
   return (
     <div className="app">
@@ -23,7 +23,7 @@ function App() {
 
         <ChatArea
           messages={messages}
-          setInputText={setInputText}
+          isTyping={isTyping}
         />
 
       </div>
@@ -33,6 +33,8 @@ function App() {
         setInputText={setInputText}
         messages={messages}
         setMessages={setMessages}
+        isTyping={isTyping}
+        setIsTyping={setIsTyping}
       />
 
     </div>

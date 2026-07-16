@@ -6,29 +6,58 @@ function ChatInput({
   setInputText,
   messages,
   setMessages,
+  setIsTyping,
 }) {
 
   const handleSend = () => {
 
     if (inputText.trim() === "") return;
 
+    const currentTime = new Date().toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+
+    // User message
     const userMessage = {
+      id: Date.now(),
       sender: "user",
       text: inputText,
+      time: currentTime,
     };
 
-    const jarvisReply = {
-      sender: "jarvis",
-      text: "Hello! I'm still under development. Soon I'll be powered by AI.",
-    };
-
-    setMessages([
-      ...messages,
+    setMessages((prevMessages) => [
+      ...prevMessages,
       userMessage,
-      jarvisReply,
     ]);
 
     setInputText("");
+
+    // Show typing state
+    setIsTyping(true);
+
+    // Fake Jarvis reply after 1 second
+    setTimeout(() => {
+
+      const botMessage = {
+        id: Date.now() + 1,
+        sender: "bot",
+        text: "Hello! I'm Jarvis. This is a demo reply.",
+        time: new Date().toLocaleTimeString([], {
+          hour: "2-digit",
+          minute: "2-digit",
+        }),
+      };
+
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        botMessage,
+      ]);
+
+      setIsTyping(false);
+
+    }, 1000);
+
   };
 
   return (
