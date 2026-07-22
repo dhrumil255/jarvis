@@ -4,13 +4,23 @@ function ChatMessages({ messages }) {
   return (
     <div className="messages">
 
-      {messages.map((message, index) => (
+      {messages.map((message) => (
 
         <div
-          key={index}
-          className={`message ${message.sender}`}
+          key={message.id}
+          className={`message-row ${message.sender}`}
         >
-          <p>{message.text}</p>
+
+          <div className={`message-bubble ${message.sender}`}>
+
+            <p>{message.text}</p>
+
+            <span className="message-time">
+              {message.time}
+            </span>
+
+          </div>
+
         </div>
 
       ))}

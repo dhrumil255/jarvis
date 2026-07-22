@@ -1,21 +1,25 @@
 .chat-area{
-
     flex:1;
+    display:flex;
+    flex-direction:column;
+    background:#111827;
+    overflow:hidden;
+}
+
+.chat-content{
+    flex:1;
+
+    overflow:hidden;
 
     display:flex;
 
-    justify-content:center;
-
-    align-items:flex-start;
-
-    overflow-y:auto;
-
-    padding:60px;
-
-    scrollbar-width:none;
+    justify-content:flex-start;
+    align-items:stretch;
 }
 
-.chat-area::-webkit-scrollbar{
-
-    display:none;
+.typing-indicator{
+    padding:16px 40px;
+    color:#7f8ea3;
+    font-size:14px;
+    font-style:italic;
 }

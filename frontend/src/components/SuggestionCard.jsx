@@ -3,22 +3,22 @@ import "../styles/SuggestionCard.css";
 function SuggestionCard({
   icon,
   title,
-  subtitle,
+  description,
   onClick,
 }) {
-
   return (
-    <div
-      className="suggestion-card"
-      onClick={onClick}
-    >
-      <div className="card-icon">
-        {icon}
+    <div className="suggestion-card" onClick={onClick}>
+
+      <div className="card-top">
+        <div className="card-icon">
+          {icon}
+        </div>
+
+        <h3>{title}</h3>
       </div>
 
-      <h3>{title}</h3>
+      <p>{description}</p>
 
-      <p>{subtitle}</p>
     </div>
   );
 }

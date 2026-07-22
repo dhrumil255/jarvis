@@ -1,42 +1,43 @@
 .welcome-screen{
-
+    flex:1;
     width:100%;
+    max-width:1050px;
 
-    max-width:900px;
+    margin:0 auto;
 
     display:flex;
-
     flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
 
-    gap:50px;
+    padding:28px 24px 12px;
 }
 
 .welcome-header{
-
     text-align:center;
+    margin-bottom:20px;
 }
 
 .welcome-header h1{
-
-    color:var(--text-primary);
-
-    font-size:42px;
-
-    margin-bottom:15px;
+    color:white;
+    font-size:36px;
+    font-weight:700;
+    line-height:1.2;
+    margin:0 0 8px;
 }
 
 .welcome-header p{
-
-    color:var(--text-secondary);
-
-    font-size:18px;
+    color:#8b98ab;
+    font-size:16px;
+    font-weight:500;
+    margin:0;
 }
 
 .suggestion-grid{
+    width:100%;
 
     display:grid;
-
     grid-template-columns:repeat(2,1fr);
 
-    gap:22px;
+    gap:16px;
 }

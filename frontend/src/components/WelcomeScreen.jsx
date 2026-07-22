@@ -1,5 +1,3 @@
-import "../styles/WelcomeScreen.css";
-
 import {
   Code2,
   FileText,
@@ -8,60 +6,52 @@ import {
 } from "lucide-react";
 
 import SuggestionCard from "./SuggestionCard";
+import "../styles/WelcomeScreen.css";
 
 function WelcomeScreen({ setInputText }) {
+  const suggestions = [
+    {
+      icon: <Code2 size={24} />,
+      title: "Generate Code",
+      description: "React, Java, Python",
+      prompt: "Generate React code",
+    },
+    {
+      icon: <FileText size={20} />,
+      title: "Review Resume",
+      description: "ATS & Formatting",
+      prompt: "Review my resume",
+    },
+    {
+      icon: <Lightbulb size={20} />,
+      title: "Brainstorm Ideas",
+      description: "Projects & Startups",
+      prompt: "Give me project ideas",
+    },
+    {
+      icon: <GraduationCap size={20} />,
+      title: "Learn Concepts",
+      description: "AI, DSA & Web Dev",
+      prompt: "Teach me React",
+    },
+  ];
 
   return (
     <div className="welcome-screen">
 
       <div className="welcome-header">
-
-        <h1>Good Evening, Dhrumil 👋</h1>
-
-        <p>
-          What would you like to accomplish today?
-        </p>
-
+        <h1>What can I help you create today?</h1>
+        <p>Build • Learn • Create</p>
       </div>
 
       <div className="suggestion-grid">
-
-        <SuggestionCard
-          icon={<Code2 size={28} />}
-          title="Generate Code"
-          subtitle="React • Java • Python"
-          onClick={() =>
-            setInputText("Generate production-ready React code.")
-          }
-        />
-
-        <SuggestionCard
-          icon={<FileText size={28} />}
-          title="Review Resume"
-          subtitle="ATS • Grammar • Design"
-          onClick={() =>
-            setInputText("Review and improve my resume.")
-          }
-        />
-
-        <SuggestionCard
-          icon={<Lightbulb size={28} />}
-          title="Project Ideas"
-          subtitle="Hackathons • Portfolio"
-          onClick={() =>
-            setInputText("Give me an innovative project idea.")
-          }
-        />
-
-        <SuggestionCard
-          icon={<GraduationCap size={28} />}
-          title="Learn Something"
-          subtitle="DSA • Cloud • React"
-          onClick={() =>
-            setInputText("Teach me React in a simple way.")
-          }
-        />
-
+        {suggestions.map((item, index) => (
+          <SuggestionCard
+            key={index}
+            {...item}
+            onClick={() => setInputText(item.prompt)}
+          />
+        ))}
       </div>
 
     </div>
